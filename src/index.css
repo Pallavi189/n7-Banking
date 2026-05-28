@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Chivo+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Chivo+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -11,6 +11,13 @@
   --color-panel: #071b26;
   --color-panel-soft: #0c2532;
   --color-cyan-glow: #42e8ff;
+}
+
+:root {
+  --frame-74-width: 1440px;
+  --frame-74-height: 9560px;
+  --frame-dark-bg: #000d12;
+  --frame-light-bg: #ffffff;
 }
 
 * {
@@ -51,8 +58,8 @@ a {
 }
 
 .figma-frame {
-  width: min(100%, 1440px);
-  min-height: 9560px;
+  width: min(100%, var(--frame-74-width));
+  min-height: var(--frame-74-height);
   opacity: 1;
   position: relative;
   background:
@@ -64,17 +71,19 @@ a {
 .fixed-frame-7 {
   position: fixed;
   top: 31px;
-  left: calc(50% - 720px + 361.77px);
+  left: calc(50% - (var(--frame-74-width) / 2) + 361.77px);
   z-index: 50;
   display: flex;
-  width: 716.4559px;
+  width: 716.4559326171875px;
   height: 47px;
   gap: 160px;
+  flex: none;
   align-items: center;
   padding: 9px 10px;
   border-radius: 12px;
   opacity: 1;
   background: #2f2f2fb2;
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   pointer-events: none;
 }
@@ -86,7 +95,65 @@ a {
 .scrolls-frame-13 {
   position: relative;
   z-index: 1;
-  min-height: 9560px;
+  width: min(100%, var(--frame-74-width));
+  min-height: var(--frame-74-height);
+  opacity: 1;
+}
+
+:where(
+  .desktop-1,
+  .frame-13,
+  .frame-12,
+  .frame-80,
+  .frame-82,
+  .frame-79,
+  .frame-40,
+  .frame-41,
+  .frame-43,
+  .frame-42
+) {
+  width: min(100%, var(--frame-74-width));
+  min-height: var(--frame-height);
+  opacity: 1;
+  background: var(--frame-bg, var(--frame-dark-bg));
+}
+
+.desktop-1 {
+  --frame-height: 811px;
+}
+
+.frame-13 {
+  --frame-height: 1177px;
+}
+
+.frame-12 {
+  --frame-height: 619px;
+}
+
+.frame-80,
+.frame-82 {
+  --frame-height: 681px;
+}
+
+.frame-79 {
+  --frame-height: 2763px;
+  --frame-bg: var(--frame-light-bg);
+}
+
+.frame-40 {
+  --frame-height: 853px;
+}
+
+.frame-41 {
+  --frame-height: 872px;
+}
+
+.frame-43 {
+  --frame-height: 316px;
+}
+
+.frame-42 {
+  --frame-height: 787px;
 }
 
 .glass-panel {
@@ -158,8 +225,32 @@ a {
 
 @media (min-width: 1024px) {
   .figma-frame {
-    width: 1440px;
-    min-height: 9560px;
+    width: var(--frame-74-width);
+    height: var(--frame-74-height);
+    min-height: 0;
+  }
+
+  .scrolls-frame-13 {
+    width: var(--frame-74-width);
+    height: var(--frame-74-height);
+    min-height: 0;
+  }
+
+  :where(
+    .desktop-1,
+    .frame-13,
+    .frame-12,
+    .frame-80,
+    .frame-82,
+    .frame-79,
+    .frame-40,
+    .frame-41,
+    .frame-43,
+    .frame-42
+  ) {
+    width: var(--frame-74-width);
+    height: var(--frame-height);
+    min-height: 0;
   }
 }
 

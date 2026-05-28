@@ -1,30 +1,16 @@
 import { motion } from "framer-motion";
 import { Aperture, Badge, Gem, Hexagon, Shield, Triangle } from "lucide-react";
-import heroBankingFrame from "../assets/hero-banking-frame.png";
 import { trustedBy } from "../data/siteData";
-import Button from "./ui/Button";
-
-function HeroVisual() {
-  return (
-    <motion.div
-      className="relative mx-auto mt-12 h-auto w-full max-w-[562px] lg:absolute lg:left-[738px] lg:top-[43.04px] lg:mt-0 lg:h-[301px] lg:w-[562px]"
-      initial={{ opacity: 0, x: 30 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.7, delay: 0.15 }}
-    >
-      <img
-        src={heroBankingFrame}
-        alt="N7 banking dashboard with recent activity and account balance cards"
-        className="h-auto w-full lg:h-[301px] lg:w-[562px]"
-        loading="eager"
-      />
-    </motion.div>
-  );
-}
+import Ellipse1 from "./Ellipse1";
+import Frame3 from "./Frame3";
+import Frame114 from "./Frame114";
 
 function Hero() {
   return (
-    <section id="top" className="desktop-1 relative bg-[#000D12] pb-16 pt-28 opacity-100 sm:pt-36 lg:h-[811px] lg:w-[1440px] lg:pb-0 lg:pt-[211.96px]">
+    <section id="top" className="desktop-1 relative pb-16 pt-28 sm:pt-36 lg:pb-0 lg:pt-[211.96px]">
+      <Ellipse1 />
+      <Frame114 />
+
       <div className="section-shell relative">
         <div className="grid items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
           <motion.div
@@ -42,24 +28,9 @@ function Hero() {
                 experience and operational excellence
               </p>
             </div>
-            <div className="mt-[52px] flex h-[49px] w-[438px] flex-wrap gap-5 opacity-100 lg:mt-0">
-              <Button
-                className="h-[49px] w-[210px] gap-2 whitespace-nowrap rounded-[10px] border-0 bg-[linear-gradient(106.53deg,#00B4FD_-5.68%,#003ACE_86.98%)] px-[51px] py-[15px] font-['Chivo_Mono'] text-[15px] font-normal leading-[130%] tracking-normal text-white opacity-100 transition duration-300 ease-out [&>span]:h-[19px] [&>span]:w-[108px] [&>span]:whitespace-nowrap"
-                icon={false}
-              >
-                Request demo
-              </Button>
-              <Button
-                className="h-[49px] w-[208px] gap-2 whitespace-nowrap rounded-[10px] border border-[#E9F4F9] px-[59px] py-[15px] font-['Chivo_Mono'] text-[15px] font-normal leading-[130%] tracking-normal text-[#E9F4F9] opacity-100 [&>span]:h-[19px] [&>span]:w-[90px] [&>span]:whitespace-nowrap"
-                variant="ghost"
-                icon={false}
-              >
-                Contact us
-              </Button>
-            </div>
+            <Frame3 className="mt-[52px] flex-wrap lg:mt-0" />
           </motion.div>
 
-          <HeroVisual />
         </div>
 
         <div className="mt-20 flex h-auto w-full max-w-[621.3569px] flex-col gap-4 opacity-100 lg:absolute lg:left-0 lg:top-[443.1px] lg:mt-0 lg:h-[55.3979px] lg:w-[621.3569px]">

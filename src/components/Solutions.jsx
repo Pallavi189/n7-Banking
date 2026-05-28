@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Atom, BadgeCheck, Blend, Orbit, Sparkles } from "lucide-react";
 import { solutions } from "../data/siteData";
-import Button from "./ui/Button";
+import Frame36 from "./Frame36";
 
 const iconMap = [Blend, Sparkles, Atom, BadgeCheck, Orbit];
 
@@ -47,20 +47,14 @@ function SolutionCard({ solution, index }) {
 
 function Solutions() {
   return (
-    <section id="solutions" className="relative bg-[#000D12] py-20 opacity-100 sm:py-28 lg:h-[1177px] lg:w-[1440px] lg:py-0">
+    <section id="solutions" className="frame-13 relative py-20 sm:py-28 lg:py-0">
       <div className="section-shell relative h-full">
         <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr]">
           <div className="opacity-100 lg:absolute lg:left-0 lg:top-[47.09px] lg:flex lg:h-[185px] lg:w-[433px] lg:flex-col lg:gap-12">
             <h2 className="h-[88px] w-[433px] font-['Archivo'] text-[37px] font-normal leading-[120%] tracking-[-0.01em] text-[#E9F4F9] opacity-100">
               All of our solutions are tailor-made to your needs
             </h2>
-            <Button
-              className="mt-7 h-[49px] w-[226px] gap-2 whitespace-nowrap rounded-[10px] border border-[#E9F4F9] px-[59px] py-[15px] font-['Chivo_Mono'] text-[15px] font-normal uppercase leading-[130%] tracking-normal text-[#E9F4F9] opacity-100 lg:mt-0 [&>span]:whitespace-nowrap"
-              variant="ghost"
-              icon={false}
-            >
-              Request demo
-            </Button>
+            <Frame36 className="mt-7 lg:mt-0" />
           </div>
         </div>
 

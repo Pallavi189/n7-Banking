@@ -1,5 +1,5 @@
 import digitalPhoneFrame85 from "../assets/digital-phone-frame-85.png";
-import Button from "./ui/Button";
+import Frame1 from "./Frame1";
 
 function DigitalBanking() {
   return (
@@ -12,12 +12,7 @@ function DigitalBanking() {
           N7 helps your financial institution improve the client experience,
           establish secure paperless procedures and modernize operations.
         </p>
-        <Button
-          className="mt-9 h-[49px] w-[210px] gap-2 whitespace-nowrap rounded-[10px] border-0 bg-[linear-gradient(106.53deg,#00B4FD_-5.68%,#003ACE_86.98%)] px-[51px] py-[15px] font-['Chivo_Mono'] text-[15px] font-normal uppercase leading-[130%] tracking-normal text-white opacity-100 [&>span]:whitespace-nowrap"
-          icon={false}
-        >
-          Request demo
-        </Button>
+        <Frame1 className="mt-9" />
       </div>
 
       <img

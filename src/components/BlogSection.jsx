@@ -73,7 +73,7 @@ function BlogCard({ large = false }) {
 
 function BlogSection() {
   return (
-    <section id="resources" className="relative h-[853px] w-[1440px] bg-[#000D12] opacity-100">
+    <section id="resources" className="frame-40 relative">
       <div className="absolute left-20 top-[83px]">
         <h2 className="w-[438px] font-['Archivo'] text-[37px] font-normal leading-[120%] tracking-[-0.01em] text-[#E9F4F9]">
           Get yourself up-to-speed on all the things happening in fintech

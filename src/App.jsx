@@ -1,13 +1,27 @@
 import BlogSection from "./components/BlogSection";
 import CaseStudies from "./components/CaseStudies";
 import CoreBanking from "./components/CoreBanking";
-import DigitalBanking from "./components/DigitalBanking";
+import CoreBenefits from "./components/CoreBenefits";
 import Footer from "./components/Footer";
+import Frame43 from "./components/Frame43";
+import Frame79 from "./components/Frame79";
 import Hero from "./components/Hero";
-import LogoStrip from "./components/LogoStrip";
 import Navbar from "./components/Navbar";
 import PaperlessCTA from "./components/PaperlessCTA";
 import Solutions from "./components/Solutions";
+
+const scrollFrames = [
+  Hero,
+  Solutions,
+  CoreBanking,
+  CoreBenefits,
+  PaperlessCTA,
+  Frame79,
+  BlogSection,
+  CaseStudies,
+  Frame43,
+  Footer,
+];
 
 function App() {
   return (
@@ -16,16 +30,10 @@ function App() {
         <Navbar />
       </div>
       <main className="scrolls-frame-13">
-        <Hero />
-        <Solutions />
-        <CoreBanking />
-        <PaperlessCTA />
-        <LogoStrip />
-        <DigitalBanking />
-        <BlogSection />
-        <CaseStudies />
+        {scrollFrames.map((Frame) => (
+          <Frame key={Frame.name} />
+        ))}
       </main>
-      <Footer />
     </div>
   );
 }

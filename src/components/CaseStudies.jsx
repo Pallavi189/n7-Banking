@@ -27,7 +27,7 @@ function CasePattern({ muted = false }) {
 
 function CaseStudies() {
   return (
-    <section className="relative h-[872px] w-[1440px] overflow-hidden bg-[#000D12] opacity-100">
+    <section className="frame-41 relative overflow-hidden">
       <h2 className="absolute left-1/2 top-[46px] -translate-x-1/2 font-['Archivo'] text-[52px] font-normal leading-[120%] tracking-[-0.01em] text-[#E9F4F9]">
         Our Case Studies
       </h2>

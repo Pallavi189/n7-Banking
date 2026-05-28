@@ -1,5 +1,5 @@
 import { BarChart3 } from "lucide-react";
-import Button from "./ui/Button";
+import Frame1 from "./Frame1";
 
 function DashboardPreview() {
   return (
@@ -58,7 +58,7 @@ function DashboardPreview() {
 
 function CoreBanking() {
   return (
-    <section id="core" className="relative h-[619px] w-[1440px] overflow-hidden bg-[#000D12] opacity-100">
+    <section id="core" className="frame-12 relative overflow-hidden">
       <div className="absolute -left-[64px] top-[121px] font-['Archivo'] text-[540px] font-medium leading-[0.75] tracking-[-0.08em] text-transparent opacity-30 [-webkit-text-stroke:1px_#003D61]">
         CB7
       </div>
@@ -70,12 +70,7 @@ function CoreBanking() {
         <p className="w-[383px] font-['Archivo'] text-[16px] font-normal leading-[130%] text-[#E9F4F9] opacity-70">
           Faster time to market with our cloud-based core banking services
         </p>
-        <Button
-          className="h-[49px] w-[210px] gap-2 whitespace-nowrap rounded-[10px] border-0 bg-[linear-gradient(106.53deg,#00B4FD_-5.68%,#003ACE_86.98%)] px-[51px] py-[15px] font-['Chivo_Mono'] text-[15px] font-normal leading-[130%] tracking-normal text-white opacity-100 [&>span]:whitespace-nowrap"
-          icon={false}
-        >
-          Request demo
-        </Button>
+        <Frame1 />
         <a
           href="#digital"
           className="inline-flex items-center gap-2 border-b border-[#00B4FD] font-['Chivo_Mono'] text-[15px] font-normal uppercase leading-[130%] text-[#00B4FD]"
